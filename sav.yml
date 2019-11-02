@@ -1,0 +1,17 @@
+git@github.com:mathix420/dotfiles.git:
+  - /home/mathix/.config/alacritty/
+  - /home/mathix/.emacs.d/
+
+  - /home/mathix/.config/sav.yml
+  - /home/mathix/.zshrc
+
+
+git@github.com:mathix420/private_config.git:
+  - /home/mathix/.config/env/
+  - /home/mathix/.ssh/
+
+
+git@github.com:mathix420/utilities.git:
+  - /mnt/sav/
+  - /usr/bin/clean:
+      - clean.sh
