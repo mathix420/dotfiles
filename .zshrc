@@ -113,3 +113,4 @@ export MAIL='agissing@student.42.fr'
 
 alias emacs='emacs -nw'
 alias open='xdg-open'
+
