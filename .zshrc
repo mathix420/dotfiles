@@ -98,8 +98,10 @@ export PATH="/home/mathix/.local/bin:$PATH"
 # Virtual envs
 . /usr/local/bin/virtualenvwrapper.sh
 
-#less colors
+#dropcontact
+export DEVELOPPER='YES'
 
+#less colors
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'

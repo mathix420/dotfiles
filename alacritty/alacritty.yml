@@ -184,7 +184,7 @@ colors:
     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
     # is `false`, the normal foreground color will be used.
     #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
+    #bright_foreground: '0x1c1c1c'
 
   # Cursor colors
   #
@@ -207,8 +207,8 @@ colors:
   # Normal colors
   normal:
     black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
+    red:     '0xff4242'
+    green:   '0x5fed72'
     yellow:  '0xe6c547'
     blue:    '0x7aa6da'
     magenta: '0xc397d8'
