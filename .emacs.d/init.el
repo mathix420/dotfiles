@@ -13,6 +13,16 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
+
+;; Dart mode
+(add-to-list 'load-path "~/.emacs.d/lisp/dart-mode/")
+(add-to-list 'load-path "~/.emacs.d/lisp/dash/")
+(add-to-list 'load-path "~/.emacs.d/lisp/s/")
+(add-to-list 'auto-mode-alist '("\\.dart\\'" . dart-mode))
+(autoload 'dart-mode "dart-mode")
+
+
+;; Forcing background color
 (add-to-list 'default-frame-alist '(background-color . "#1c1c1c"))
 
 (custom-set-variables
