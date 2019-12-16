@@ -36,6 +36,7 @@
    ["#1c1c1c" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(custom-enabled-themes (quote (tsdh-dark)))
  '(gud-gdb-command-name "gdb --annotate=1")
+ '(inhibit-startup-screen t)
  '(large-file-warning-threshold nil)
  '(package-archives
    (quote
@@ -47,5 +48,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- 
  )

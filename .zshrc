@@ -96,7 +96,7 @@ eval "$(pyenv virtualenv-init -)"
 export PATH="/home/mathix/.local/bin:$PATH"
 
 # Virtual envs
-. /usr/local/bin/virtualenvwrapper.sh
+#. /usr/local/bin/virtualenvwrapper.sh
 
 #dropcontact
 export DEVELOPPER='YES'
@@ -115,4 +115,3 @@ export MAIL='agissing@student.42.fr'
 
 alias emacs='emacs -nw'
 alias open='xdg-open'
-
