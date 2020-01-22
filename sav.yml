@@ -1,5 +1,7 @@
 git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.config/alacritty/
+  - /home/mathix/.config/rofi/
+  - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
 
   - /home/mathix/.config/sav.yml
