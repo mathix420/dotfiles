@@ -188,6 +188,6 @@ bar {
 }
 
 # transparency manager
-exec compton
+exec compton --backend glx -b
 
 exec feh --bg-scale ~/Images/wallpapers/forest-under-clouds-1287075.jpg
