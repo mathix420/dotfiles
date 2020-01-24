@@ -32,6 +32,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
 
+# lock computer
+bindsym $mod+Escape exec i3lock
+
 # kill focused window
 bindsym $mod+Shift+A kill
 
