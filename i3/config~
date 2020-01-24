@@ -36,7 +36,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec rofi --no-startup-id -show run -fullscreen
+bindsym $mod+d exec rofi --no-startup-id -show run -fullscreen
 
 # hide window borders
 hide_edge_borders both
@@ -91,7 +91,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+q focus parent
