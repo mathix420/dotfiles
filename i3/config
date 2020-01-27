@@ -38,7 +38,7 @@ bindsym $mod+E exec --no-startup-id nautilus
 bindsym $mod+Return exec --no-startup-id alacritty
 
 # lock computer
-bindsym $mod+Escape exec i3lock
+bindsym $mod+Escape exec i3lock -i /home/mathix/Images/fux.png
 
 # kill focused window
 bindsym $mod+Shift+A kill
