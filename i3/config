@@ -31,6 +31,9 @@ floating_modifier $mod
 
 #bindsym  exec gnome-screenshot -a -c
 
+bindsym $mod+C exec xclip -out -selection primary | xclip -in -selection clipboard
+bindsym $mod+Shift+V exec xclip -o
+
 # start file explorer
 bindsym $mod+E exec --no-startup-id nautilus
 
@@ -44,7 +47,7 @@ bindsym $mod+Escape exec i3lock -i /home/mathix/Images/fux.png
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec rofi --no-startup-id -show run -fullscreen
+bindsym $mod+space exec rofi --no-startup-id -show drun -fullscreen
 
 # hide window borders
 hide_edge_borders both
@@ -196,3 +199,5 @@ bar {
 exec compton --backend glx -b
 
 exec feh --bg-scale ~/Images/wallpapers/forest-under-clouds-1287075.jpg
+
+exec xinput set-prop 14 300 1

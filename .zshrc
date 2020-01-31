@@ -117,3 +117,4 @@ export MAIL='agissing@student.42.fr'
 
 alias emacs='emacs -nw'
 alias open='xdg-open'
+alias slack='/opt/google/chrome/google-chrome --app="https://pulsar-systems.slack.com/"'
