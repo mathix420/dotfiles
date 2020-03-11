@@ -95,6 +95,8 @@ eval "$(pyenv virtualenv-init -)"
 
 export PATH="/home/mathix/.local/bin:$PATH"
 
+export PATH="/usr/local:$PATH"
+
 export PATH="/flutter/flutter/bin:$PATH"
 
 # Virtual envs
