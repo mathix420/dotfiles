@@ -95,9 +95,11 @@ eval "$(pyenv virtualenv-init -)"
 
 export PATH="/home/mathix/.local/bin:$PATH"
 
-export PATH="/usr/local:$PATH"
-
 export PATH="/flutter/flutter/bin:$PATH"
+
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Virtual envs
 #. /usr/local/bin/virtualenvwrapper.sh
