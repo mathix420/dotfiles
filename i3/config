@@ -204,3 +204,8 @@ exec --no-startup-id xinput set-prop 14 300 1
 
 # run emacs server
 exec --no-startup-id emacs --daemon
+
+# run google chrome
+exec --no-startup-id i3-msg 'workspace 3: WEB; exec /usr/bin/google-chrome'
+exec --no-startup-id i3-msg 'workspace 2: IDE; exec /snap/bin/code'
+exec --no-startup-id i3-msg 'workspace 1: Term; exec /usr/bin/alacritty; exec /usr/bin/alacritty'
