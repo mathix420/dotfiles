@@ -196,11 +196,11 @@ bar {
 }
 
 # transparency manager
-exec compton --backend glx -b
+exec --no-startup-id compton --backend glx -b
 
-exec feh --bg-scale ~/Images/wallpapers/forest-under-clouds-1287075.jpg
+exec --no-startup-id feh --bg-scale ~/Images/wallpapers/forest-under-clouds-1287075.jpg
 
-exec xinput set-prop 14 300 1
+exec --no-startup-id xinput set-prop 14 300 1
 
 # run emacs server
-exec emacs --daemon
+exec --no-startup-id emacs --daemon
