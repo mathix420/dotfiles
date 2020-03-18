@@ -201,3 +201,6 @@ exec compton --backend glx -b
 exec feh --bg-scale ~/Images/wallpapers/forest-under-clouds-1287075.jpg
 
 exec xinput set-prop 14 300 1
+
+# run emacs server
+exec emacs --daemon
