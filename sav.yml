@@ -18,3 +18,5 @@ git@github.com:mathix420/utilities.git:
   - /mnt/sav/
   - /usr/bin/clean:
       - clean.sh
+  - /usr/bin/up:
+      - up.sh
