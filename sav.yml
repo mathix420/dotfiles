@@ -16,7 +16,6 @@ git@github.com:mathix420/private_config.git:
 
 git@github.com:mathix420/utilities.git:
   - /mnt/sav/
+  - /home/mathix/.config/up/
   - /usr/bin/clean:
       - clean.sh
-  - /usr/bin/up:
-      - up.sh
