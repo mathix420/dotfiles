@@ -40,7 +40,7 @@
    (quote
     (("gnu" . "https://elpa.gnu.org/packages/")
      ("melpa" . "https://stable.melpa.org/packages/"))))
- '(package-selected-packages (quote (yaml-mode))))
+ '(package-selected-packages (quote (vue-mode yaml-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
