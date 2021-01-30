@@ -117,9 +117,15 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export EDITOR='emacsclient -t'
+export USER='agissing'
 export MAIL='agissing@student.42.fr'
 
 alias emacs='emacsclient -t'
 alias open='xdg-open'
 alias slack='/opt/google/chrome/google-chrome --app="https://pulsar-systems.slack.com/"'
 alias sudo='sudo '
+
+alias mf-gen="/bin/sh ~/42-utilities/update.sh; python3 ~/42-utilities/mf-gen.py"
+alias proto-list="/bin/sh ~/42-utilities/update.sh; sh ~/42-utilities/proto-list.sh"
+
+cat /home/mathix/TODO.todo

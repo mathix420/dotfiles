@@ -1,0 +1,9 @@
+ls
+la
+ls
+ls
+ll
+la 
+ls -lAh
+ls -lAh /
+ls -lAh ~

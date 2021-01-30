@@ -66,4 +66,4 @@
 
 ;; Highlight trailing whitespace.
 (setq-default show-trailing-whitespace t)
-(set-face-background 'trailing-whitespace "color-129")
+(set-face-background 'trailing-whitespace "red")
