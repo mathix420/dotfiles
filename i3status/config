@@ -4,6 +4,7 @@ general {
     interval = 5
 }
 
+order += "memory"
 order += "disk /"
 order += "wireless wlo1"
 #order += "ethernet lo"
@@ -35,6 +36,12 @@ battery 0 {
 tztime local {
     format = "%Y-%m-%d %H:%M"
     timezone = "Europe/Paris"
+}
+
+memory {
+    format = "%used"
+    threshold_degraded = "10%"
+    format_degraded = "🚨%free🚨"
 }
 
 disk "/" {

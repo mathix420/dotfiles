@@ -69,6 +69,15 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+
+# NVM / NPM / NODE
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# https://github.com/Sparragus/zsh-auto-nvm-use
+# plugins+=(zsh-auto-nvm-use)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -128,4 +137,9 @@ alias sudo='sudo '
 alias mf-gen="/bin/sh ~/42-utilities/update.sh; python3 ~/42-utilities/mf-gen.py"
 alias proto-list="/bin/sh ~/42-utilities/update.sh; sh ~/42-utilities/proto-list.sh"
 
-cat /home/mathix/TODO.todo
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+# fnm
+export PATH=/home/mathix/.fnm:$PATH
+eval "`fnm env --use-on-cd`"

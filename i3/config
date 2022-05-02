@@ -9,6 +9,12 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+
+#Needed for i3-gaps
+#hide_edge_borders both
+for_window [class="^.*"] border pixel 2
+
+# Set Master Key
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -216,9 +222,55 @@ bar {
 # transparency manager
 exec --no-startup-id compton --backend glx -b
 
-exec --no-startup-id feh --bg-scale ~/Images/wallpapers/photo-of-snow-capped-mountains-during-daytime-3374204.jpg
+exec --no-startup-id feh --bg-scale ~/Images/wallpapers/hydra_bay.jpg
 
 exec --no-startup-id xinput set-prop 16 300 1
 
 # run emacs server
 exec --no-startup-id /usr/bin/emacs --daemon
+
+
+# i3-gaps key bindings
+gaps inner 0
+gaps outer 0
+
+#smart_gaps on
+smart_borders on
+
+bindsym $mod+g mode "$mode_gaps"
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+mode "$mode_gaps" {
+	 bindsym o		mode "$mode_gaps_outer"
+	 bindsym i		mode "$mode_gaps_inner"
+
+	 bindsym Return	mode "default"
+	 bindsym Escape mode "defautl"
+}
+mode "$mode_gaps_inner" {
+	 bindsym plus		gaps inner current plus 5
+	 bindsym minus		gaps inner current minus 5
+	 bindsym 0			gaps inner current set 0
+
+     bindsym Shift+plus		 gaps inner all plus 5
+     bindsym Shift+minus	 gaps inner all minus 5
+     bindsym Shift+0		 gaps inner all set 0
+
+	 bindsym Return	mode "default"
+	 bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+	 bindsym plus		gaps outer current plus 5
+	 bindsym minus		gaps outer current minus 5
+	 bindsym 0			gaps outer current set 0
+
+     bindsym Shift+plus		 gaps outer all plus 5
+     bindsym Shift+minus	 gaps outer all minus 5
+     bindsym Shift+0		 gaps outer all set 0
+
+	 bindsym Return	mode "default"
+	 bindsym Escape mode "defautl"
+}
