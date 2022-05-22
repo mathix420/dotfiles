@@ -1,0 +1,18 @@
+configuration {
+	width: 200;
+	lines: 1;
+	columns: 1;
+	font: "Ubuntu 22";
+	bw: 0;
+	padding: 400;
+	eh: 1;
+	modi: "drun,window,emoji,run,ssh,";
+	auto-select: true;
+	line-margin: 10;
+	separator-style: "none";
+	hide-scrollbar: true;
+	color-normal: "argb:00252936, #ffffff, argb:00252936, argb:009575cd, #ff9575cd";
+	color-urgent: "argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000";
+	color-active: "argb:00252936, #252936, argb:00252936, argb:009575cd, #ffc000";
+	color-window: "argb:dd252936,  #9575cd, argb:ffffffff";
+}
