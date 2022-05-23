@@ -6,8 +6,7 @@ configuration {
 	bw: 0;
 	padding: 400;
 	eh: 1;
-	modi: "drun,window,emoji,run,ssh,";
-	auto-select: true;
+	fullscreen: true;
 	line-margin: 10;
 	separator-style: "none";
 	hide-scrollbar: true;

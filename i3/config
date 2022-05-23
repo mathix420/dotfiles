@@ -53,10 +53,10 @@ bindsym $mod+Escape exec i3lock -i /home/mathix/Images/fux.png
 bindsym $mod+Shift+A kill
 
 # start rofi (a program launcher)
-bindsym $mod+space exec rofi --no-startup-id -show drun -fullscreen
+bindsym $mod+space exec rofi --no-startup-id -modi "drun,window,run" -show drun -auto-select
 
 # start rofi emoji picker
-bindsym $mod+D exec rofi --no-startup-id -show emoji -fullscreen
+bindsym $mod+D exec rofi --no-startup-id -modi "emoji" -show emoji
 
 # hide window borders
 hide_edge_borders both
