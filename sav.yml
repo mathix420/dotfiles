@@ -1,4 +1,5 @@
 git@github.com:mathix420/dotfiles.git:
+  - /home/mathix/.config/rofi-notion/
   - /home/mathix/.config/fontconfig/
   - /home/mathix/.config/alacritty/
   - /home/mathix/.config/i3status/
