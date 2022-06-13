@@ -5,11 +5,10 @@ general {
 }
 
 order += "memory"
-order += "cpu_usage"
 order += "disk /"
 order += "wireless wlo1"
 #order += "ethernet lo"
-order += "battery all"
+order += "battery 0"
 order += "tztime local"
 
 wireless wlo1 {
@@ -23,7 +22,7 @@ ethernet lo {
     format_down = "E: down"
 }
 
-battery all {
+battery 0 {
     format = "%status %percentage %remaining"
     format_down = "No battery"
     status_chr = "CHR"
@@ -31,7 +30,7 @@ battery all {
     status_unk = "UNK"
     status_full = "FULL"
     path = "/sys/class/power_supply/BAT%d/uevent"
-    low_threshold = 20
+    low_threshold = 10
 }
 
 tztime local {
@@ -40,20 +39,11 @@ tztime local {
 }
 
 memory {
-	format = "RAM %percentage_used"
+    format = "%used"
     threshold_degraded = "10%"
-	threshold_critical = "5%"
-    format_degraded = "🚨 RAM %percentage_used 🚨"
-}
-
-cpu_usage {
-	format = "CPU %usage"
-	max_threshold = "90"
-	format_above_threshold = "🚨 CPU %usage 🚨"
-	degraded_threshold = "80"
-	format_above_degraded_threshold = "☣ CPU %usage ☣"
+    format_degraded = "🚨%free🚨"
 }
 
 disk "/" {
-    format = "DISK %free"
+    format = "%free"
 }

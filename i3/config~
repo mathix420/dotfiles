@@ -234,6 +234,7 @@ bar {
 	       #                  border     background  text
 	       focused_workspace  #111111    #111111     #eeeeee
 	       inactive_workspace #111111    #111111     #6f6f6f
+	       
 	}
 }
 
