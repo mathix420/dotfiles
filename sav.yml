@@ -14,6 +14,7 @@ git@github.com:mathix420/dotfiles.git:
 git@github.com:mathix420/private_config.git:
   - /home/mathix/.config/env/
   - /home/mathix/.ssh/
+  - /home/mathix/2fa.yml
 
 
 git@github.com:mathix420/utilities.git:
