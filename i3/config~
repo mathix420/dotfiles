@@ -58,9 +58,6 @@ bindsym $mod+space exec "rofi --no-startup-id -modi drun,window,run -show drun -
 # start rofi emoji picker
 bindsym $mod+D exec rofi --no-startup-id -modi emoji -show emoji
 
-# start rofi-totp
-bindsym $mod+L exec --no-startup-id USER=mathix rofi-totp
-
 # create new task in Peach's notion DB
 bindsym $mod+Insert exec rofi-notion run peach-tasks
 
