@@ -243,7 +243,7 @@ bar {
 # transparency manager
 exec --no-startup-id compton --backend glx -b
 
-exec --no-startup-id feh --bg-scale ~/Images/wallpapers/hydra_bay.jpg
+exec --no-startup-id feh --bg-scale ~/Images/wallpapers/neon-dunes-8k.jpg
 
 exec --no-startup-id xinput set-prop 16 300 1
 

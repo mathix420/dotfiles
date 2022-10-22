@@ -7,6 +7,8 @@ git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
 
+  - /home/mathix/Images/wallpapers/
+
   - /home/mathix/.config/sav.yml
   - /home/mathix/.zshrc
 
