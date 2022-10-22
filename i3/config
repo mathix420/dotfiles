@@ -13,6 +13,7 @@
 #Needed for i3-gaps
 #hide_edge_borders both
 for_window [class="^.*"] border pixel 2
+for_window [floating_from="user"] border pixel 4
 
 # Set Master Key
 set $mod Mod4
