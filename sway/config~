@@ -253,10 +253,6 @@ bindswitch --reload --locked lid:off output eDP-1 enable
 
 exec --no-startup-id xinput set-prop 16 300 1
 
-# https://askubuntu.com/a/1172030
-exec --no-startup-id pactl load-module module-bluetooth-policy
-exec --no-startup-id pactl load-module module-bluetooth-discover
-
 # run emacs server
 exec --no-startup-id /usr/bin/emacs --daemon
 
