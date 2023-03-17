@@ -5,23 +5,28 @@ git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.config/i3status/
   - /home/mathix/.config/sway/
   - /home/mathix/.config/rofi/
-  - /home/mathix/.config/i3/
+  # - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
 
-  - /home/mathix/Images/wallpapers/
+  - /etc/fonts/fonts.conf:
+      - fonts/fonts.conf
+  - /etc/fonts/local.conf:
+      - fonts/local.conf
+
+  - /home/mathix/wallpapers/
 
   - /home/mathix/.config/sav.yml
   - /home/mathix/.zshrc
 
 
 git@github.com:mathix420/private_config.git:
-  - /home/mathix/.config/env/
+  - /home/mathix/.config/rofi-totp/2fa.yml
   - /home/mathix/.ssh/
-  - /home/mathix/2fa.yml
 
 
 git@github.com:mathix420/utilities.git:
-  - /mnt/sav/
-  - /home/mathix/.config/up/
+  - /usr/bin/sav:
+      - sav/sav.py
+  # - /home/mathix/.config/up/
   - /usr/bin/clean:
       - clean.sh

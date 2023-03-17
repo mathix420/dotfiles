@@ -39,15 +39,14 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#1c1c1c" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
- '(custom-enabled-themes (quote (tsdh-dark)))
+ '(custom-enabled-themes '(tsdh-dark))
  '(gud-gdb-command-name "gdb --annotate=1")
  '(inhibit-startup-screen t)
  '(large-file-warning-threshold nil)
  '(package-archives
-   (quote
-    (("gnu" . "https://elpa.gnu.org/packages/")
-     ("melpa" . "https://stable.melpa.org/packages/"))))
- '(package-selected-packages (quote (vue-mode yaml-mode))))
+   '(("gnu" . "https://elpa.gnu.org/packages/")
+	 ("melpa" . "https://stable.melpa.org/packages/")))
+ '(package-selected-packages '(rust-mode vue-mode yaml-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -67,3 +66,5 @@
 ;; Highlight trailing whitespace.
 (setq-default show-trailing-whitespace t)
 (set-face-background 'trailing-whitespace "color-129")
+
+;; Rust mode

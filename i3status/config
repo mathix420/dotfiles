@@ -7,12 +7,12 @@ general {
 order += "memory"
 order += "cpu_usage"
 order += "disk /"
-order += "wireless wlo1"
+order += "wireless wlan0"
 #order += "ethernet lo"
 order += "battery all"
 order += "tztime local"
 
-wireless wlo1 {
+wireless wlan0 {
     format_up = "W: (%quality at %essid, %bitrate) %ip"
     format_down = "W: down"
 }

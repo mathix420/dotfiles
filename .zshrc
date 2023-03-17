@@ -67,7 +67,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git aws)
 
 
 # NVM / NPM / NODE
@@ -143,3 +143,6 @@ complete -o nospace -C /usr/bin/terraform terraform
 # fnm
 export PATH=/home/mathix/.fnm:$PATH
 eval "`fnm env --use-on-cd`"
+
+export SUDO_EDITOR="emacsclient"
+alias autoremove="sudo pacman -Qdtq | sudo pacman -Rs -"
