@@ -46,7 +46,7 @@
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
 	 ("melpa" . "https://stable.melpa.org/packages/")))
- '(package-selected-packages '(rust-mode vue-mode yaml-mode)))
+ '(package-selected-packages '(typescript-mode lsp-mode rust-mode vue-mode yaml-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

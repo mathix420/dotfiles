@@ -69,7 +69,7 @@ bindsym $mod+Insert exec /home/mathix/.local/bin/rofi-notion run peach-tasks
 bindsym $mod+B exec --no-startup-id /opt/rofi-bluetooth/rofi-bluetooth
 
 # screen capture
-# bindsym Print exec --no-startup-id screen-capture-tool
+bindsym Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
 
 # hide window borders
 hide_edge_borders both
@@ -200,6 +200,9 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Luminiosity controls
+bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s 10%+
+bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -241,10 +244,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 	colors {
-	       background #111111
+	       background #11111188
 	       #                  border     background  text
-	       focused_workspace  #111111    #111111     #eeeeee
-	       inactive_workspace #111111    #111111     #6f6f6f
+	       focused_workspace  #11111188    #11111188     #eeeeee
+	       inactive_workspace #11111188    #11111188     #6f6f6f
 	}
 }
 
@@ -269,7 +272,7 @@ exec --no-startup-id /usr/bin/emacs --daemon
 
 
 # i3-gaps key bindings
-gaps inner 0
+gaps inner 10
 gaps outer 0
 
 # smart_gaps on
