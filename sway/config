@@ -53,6 +53,9 @@ bindsym $mod+Escape exec swaylock -i /home/mathix/wallpapers/fux.jpg
 # kill focused window
 bindsym $mod+Shift+A kill
 
+# wifi-manager gui
+bindsym $mod+W exec --no-startup-id rofi -modi "wifi:iwdrofimenu" -show wifi
+
 # start rofi (a program launcher)
 bindsym $mod+space exec --no-startup-id rofi -modi "drun,window,run" -show drun -auto-select
 
@@ -63,7 +66,7 @@ bindsym $mod+D exec --no-startup-id rofi -modi emoji -show emoji
 bindsym $mod+L exec --no-startup-id USER=mathix rofi-totp
 
 # create new task in Peach's notion DB
-bindsym $mod+Insert exec /home/mathix/.local/bin/rofi-notion run peach-tasks
+bindsym $mod+Insert exec rofi-notion run peach-tasks
 
 # start rofi-bluetooth manager
 bindsym $mod+B exec --no-startup-id /opt/rofi-bluetooth/rofi-bluetooth

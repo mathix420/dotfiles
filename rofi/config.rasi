@@ -1,5 +1,5 @@
 configuration {
-/*	modi: "window,run,ssh";*/
+/*	modi: "window,run,ssh,wifi:iwdrofimenu";*/
 	width: 200;
 	lines: 1;
 	columns: 1;
