@@ -146,3 +146,4 @@ eval "`fnm env --use-on-cd`"
 
 export SUDO_EDITOR="emacsclient"
 alias autoremove="sudo pacman -Qdtq | sudo pacman -Rs -"
+alias warp-connect="warp-cli connect && sleep 2 && sudo systemctl restart systemd-resolved && warp-cli -l status"

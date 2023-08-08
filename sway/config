@@ -74,6 +74,9 @@ bindsym $mod+B exec --no-startup-id /opt/rofi-bluetooth/rofi-bluetooth
 # screen capture
 bindsym Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
 
+# clear notifications
+bindsym $mod+Delete exec makoctl dismiss -a
+
 # hide window borders
 hide_edge_borders both
 
