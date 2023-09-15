@@ -9,6 +9,7 @@ git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.emacs.d/
 
   - /usr/share/sddm/themes/chili/
+  - /etc/sddm.conf.d/
 
   - /etc/fonts/fonts.conf:
       - fonts/fonts.conf
