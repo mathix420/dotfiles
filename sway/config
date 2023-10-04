@@ -209,6 +209,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Luminiosity controls
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
+bindsym $mod+XF86MonBrightnessUp exec curl -X POST http://192.168.1.58:8123/api/webhook/light-arnaud-hoZGhbTW_D537UwWgMehCK6S
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
