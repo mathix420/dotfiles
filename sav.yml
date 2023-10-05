@@ -17,6 +17,9 @@ git@github.com:mathix420/dotfiles.git:
   # Logitech stuff config
   - /etc/logid.cfg
 
+  # IWD config
+  - /etc/iwd/main.conf
+
   - /etc/fonts/fonts.conf:
       - fonts/fonts.conf
   - /etc/fonts/local.conf:
@@ -31,6 +34,9 @@ git@github.com:mathix420/dotfiles.git:
 git@github.com:mathix420/private_config.git:
   - /home/mathix/.config/rofi-totp/2fa.yml
   - /home/mathix/.ssh/
+
+  # UFW
+  - /etc/ufw/
 
 
 git@github.com:mathix420/utilities.git:
