@@ -8,6 +8,9 @@ git@github.com:mathix420/dotfiles.git:
   # - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
 
+  # mako - notifications
+  - /home/mathix/.config/mako/
+
   # For ssdm config and backward compatibility
   - /etc/X11/xorg.conf.d/
 
