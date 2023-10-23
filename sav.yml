@@ -16,6 +16,7 @@ git@github.com:mathix420/dotfiles.git:
 
   - /usr/share/sddm/themes/chili/
   - /etc/sddm.conf.d/
+  - /usr/share/sddm/scripts/Xsetup
 
   # Logitech stuff config
   - /etc/logid.cfg
