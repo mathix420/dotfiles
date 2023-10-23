@@ -12,7 +12,7 @@
 
 #Needed for i3-gaps
 #hide_edge_borders both
-#for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 #for_window [floating_from="user"] border pixel 4
 for_window [app_id="org.gnome.Nautilus"] floating enable
 
@@ -82,7 +82,7 @@ bindsym $mod+Delete exec makoctl dismiss -a
 hide_edge_borders both
 
 # hide window title bar
-default_border pixel
+default_border pixel 0
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -284,7 +284,7 @@ gaps inner 10
 gaps outer 0
 
 # smart_gaps on
-smart_borders on
+smart_borders off
 
 bindsym $mod+g        gaps inner all set 10
 bindsym $mod+Shift+g  gaps inner all set 0
@@ -299,6 +299,10 @@ input "1133:45915:MX_Keys_Keyboard" {
 
 input "5426:569:Razer_Razer_Blade_Keyboard" {
 	 xkb_layout mx
+}
+
+input "1739:52643:1A581000:00_06CB:CDA3_Touchpad" {
+	  tap enabled
 }
 
 
