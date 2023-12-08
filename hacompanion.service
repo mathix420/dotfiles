@@ -1,0 +1,19 @@
+[Unit]
+Description=Home Assistant Desktop Companion
+Documentation=https://github.com/tobias-kuendig/hacompanion
+# Uncomment the line below if you are using NetworkManager to ensure hacompanion
+# only starts after your host is online
+After=NetworkManager-wait-online.service
+
+[Service]
+# Load ~/.config/hacompanion/env where you can for example set
+# HASS_TOKEN, HASS_DEVICE_NAME etc.
+# EnvironmentFile=%E/hacompanion/env
+# Make sure to set the absolute path to hacompanion correctly below
+ExecStart=/usr/bin/hacompanion -config=%E/hacompanion.toml
+Restart=on-failure
+RestartSec=5
+Type=simple
+
+[Install]
+WantedBy=default.target
