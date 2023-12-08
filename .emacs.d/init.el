@@ -67,4 +67,7 @@
 (setq-default show-trailing-whitespace t)
 (set-face-background 'trailing-whitespace "color-129")
 
-;; Rust mode
+;; Background alpha
+(set-frame-parameter nil 'alpha-background 70)
+
+(add-to-list 'default-frame-alist '(alpha-background . 70))

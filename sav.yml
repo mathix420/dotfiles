@@ -37,10 +37,13 @@ git@github.com:mathix420/dotfiles.git:
 
 git@github.com:mathix420/private_config.git:
   - /home/mathix/.config/rofi-totp/2fa.yml
+
+  # https://github.com/tobias-kuendig/hacompanion
+  - /home/mathix/.config/hacompanion.toml
   - /home/mathix/.ssh/
 
-  # UFW
-  - /etc/ufw/
+  # UFW, not used anymore
+  # - /etc/ufw/
 
 
 git@github.com:mathix420/utilities.git:
