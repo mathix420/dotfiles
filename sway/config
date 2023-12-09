@@ -254,8 +254,9 @@ bar {
 	colors {
 	       background #11111188
 	       #                  border     background  text
-	       focused_workspace  #11111188    #11111188     #eeeeee
-	       inactive_workspace #11111188    #11111188     #6f6f6f
+	       focused_workspace  #11111100    #11111188     #eeeeee
+		   active_workspace   #11111100    #11111188     #6f6f6f
+	       inactive_workspace #11111100    #11111188     #6f6f6f
 	}
 }
 
