@@ -277,7 +277,7 @@ exec --no-startup-id pactl load-module module-bluetooth-policy
 exec --no-startup-id pactl load-module module-bluetooth-discover
 
 # run emacs server
-exec --no-startup-id /usr/bin/emacs --daemon
+# exec --no-startup-id /usr/bin/emacs --daemon
 
 
 # i3-gaps key bindings
