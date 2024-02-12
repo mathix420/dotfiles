@@ -260,6 +260,13 @@ bar {
 	}
 }
 
+# swayfx config
+blur enable
+blur_radius 5
+
+corner_radius 10
+
+
 # transparency manager
 output * bg /home/mathix/wallpapers/neon-dunes-8k.jpg fill
 output eDP-1 position 0 0

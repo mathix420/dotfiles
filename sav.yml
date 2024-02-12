@@ -36,6 +36,7 @@ git@github.com:mathix420/dotfiles.git:
 
   - /home/mathix/.config/sav.yml
   - /home/mathix/.zshrc
+  - /home/mathix/.oh-my-zsh/custom/themes/af-mathix.zsh-theme
 
 
 git@github.com:mathix420/private_config.git:

@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mathix/.oh-my-zsh"
 
-ZSH_THEME="af-magic"
+ZSH_THEME="af-mathix"
 
 
 autoload -U colors && colors
@@ -147,3 +147,6 @@ eval "`fnm env --use-on-cd`"
 export SUDO_EDITOR="emacsclient"
 alias autoremove="sudo pacman -Qdtq | sudo pacman -Rs -"
 alias warp-connect="warp-cli connect && sleep 2 && sudo systemctl restart systemd-resolved && warp-cli -l status"
+
+# OBS fix
+export QT_QPA_PLATFORM=wayland

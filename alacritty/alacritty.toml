@@ -9,7 +9,7 @@ draw_bold_text_with_bright_colors = true
 indexed_colors = []
 
 [colors.bright]
-black = "0x666666"
+black = "0x2d2d2d"
 blue = "0x52a1ff"
 cyan = "0x54ced6"
 green = "0x39f752"
@@ -32,8 +32,12 @@ red = "0xff4242"
 white = "0xeaeaea"
 yellow = "0xe6c547"
 
+[colors.dim]
+black = "0x000000"
+white = "0xffffff"
+
 [colors.primary]
-background = "0x1c1c1c"
+background = "0x0d0d0d"
 foreground = "0xeaeaea"
 
 [cursor]
@@ -624,7 +628,7 @@ program = "/bin/zsh"
 [window]
 decorations = "full"
 dynamic_padding = false
-opacity = 0.92
+opacity = 0.7
 startup_mode = "Windowed"
 
 [window.dimensions]
