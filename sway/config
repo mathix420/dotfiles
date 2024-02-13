@@ -14,7 +14,14 @@
 #hide_edge_borders both
 for_window [class="^.*"] border pixel 0
 #for_window [floating_from="user"] border pixel 4
+
+# Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable
+
+# Todo mate custom app
+for_window [app_id="chrome-todomate.net__-Default"] floating enable
+for_window [app_id="chrome-todomate.net__-Default"] resize set 937 762
+
 
 # Set Master Key
 set $mod Mod4
@@ -264,7 +271,7 @@ bar {
 blur enable
 blur_radius 5
 
-corner_radius 10
+corner_radius 12
 
 
 # transparency manager

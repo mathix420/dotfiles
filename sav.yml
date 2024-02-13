@@ -38,6 +38,20 @@ git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.zshrc
   - /home/mathix/.oh-my-zsh/custom/themes/af-mathix.zsh-theme
 
+  #
+  # Custom "web apps"
+  #
+
+  # Todo mate
+  - /usr/share/applications/todomate.desktop
+  - /usr/share/pixmaps/todomate.png
+  # Notion
+  - /usr/share/applications/notion.desktop
+  - /usr/share/pixmaps/notion.png
+  # YT Music
+  - /usr/share/applications/youtube-music.desktop
+  - /usr/share/pixmaps/youtube-music.png
+
 
 git@github.com:mathix420/private_config.git:
   - /home/mathix/.config/rofi-totp/2fa.yml

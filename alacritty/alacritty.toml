@@ -627,7 +627,7 @@ program = "/bin/zsh"
 
 [window]
 decorations = "full"
-dynamic_padding = false
+dynamic_padding = true
 opacity = 0.7
 startup_mode = "Windowed"
 
