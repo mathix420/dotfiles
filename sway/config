@@ -18,6 +18,10 @@ for_window [class="^.*"] border pixel 0
 # Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable
 
+# GTK file picker
+for_window [title="Open Files" app_id="xdg-desktop-portal-gtk"] floating enable
+for_window [title="Open Files" app_id="xdg-desktop-portal-gtk"] resize set 1140 650
+
 # Todo mate custom app
 for_window [app_id="chrome-todomate.net__-Default"] floating enable
 for_window [app_id="chrome-todomate.net__-Default"] resize set 937 762
