@@ -26,6 +26,9 @@ for_window [title="Open Files" app_id="xdg-desktop-portal-gtk"] resize set 1140 
 for_window [app_id="chrome-todomate.net__-Default"] floating enable
 for_window [app_id="chrome-todomate.net__-Default"] resize set 937 762
 
+# Beeper
+for_window [class="Beeper"] floating enable
+
 
 # Set Master Key
 set $mod Mod4

@@ -4,7 +4,7 @@ Type=Application
 Name=Notion
 GenericName=Notes
 Comment=A new tool that blends your everyday work apps into one.
-Exec=/usr/bin/google-chrome-stable --start-fullscreen --app=https://www.notion.so/
+Exec=/usr/bin/google-chrome-stable --app=https://www.notion.so/
 Icon=notion
 Terminal=false
 Categories=Utility;
