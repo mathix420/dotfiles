@@ -8,6 +8,9 @@ git@github.com:mathix420/dotfiles.git:
   # - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
 
+  # GTK
+  - /home/mathix/.config/gtk-4.0
+
   # https://github.com/tobias-kuendig/hacompanion
   - /home/mathix/.config/systemd/user/hacompanion.service
 

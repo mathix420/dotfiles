@@ -150,3 +150,6 @@ alias warp-connect="warp-cli connect && sleep 2 && sudo systemctl restart system
 
 # OBS fix
 export QT_QPA_PLATFORM=wayland
+
+# Zoxide
+eval "$(zoxide init zsh)"
