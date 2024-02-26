@@ -15,6 +15,9 @@
 for_window [class="^.*"] border pixel 0
 #for_window [floating_from="user"] border pixel 4
 
+# New window layout
+for_window [app_id=".*"] split toggle
+
 # Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable
 

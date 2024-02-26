@@ -110,6 +110,10 @@ export PATH="/flutter/flutter/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Virtual envs
 #. /usr/local/bin/virtualenvwrapper.sh
 
@@ -152,4 +156,4 @@ alias warp-connect="warp-cli connect && sleep 2 && sudo systemctl restart system
 export QT_QPA_PLATFORM=wayland
 
 # Zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
