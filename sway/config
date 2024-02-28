@@ -15,9 +15,6 @@
 for_window [class="^.*"] border pixel 0
 #for_window [floating_from="user"] border pixel 4
 
-# New window layout
-for_window [app_id=".*"] split toggle
-
 # Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable
 
@@ -75,7 +72,7 @@ bindsym $mod+Shift+A kill
 bindsym $mod+W exec --no-startup-id rofi -modi "wifi:iwdrofimenu" -show wifi
 
 # start rofi (a program launcher)
-bindsym $mod+space exec --no-startup-id rofi -modi "drun,window,run" -show drun -auto-select
+bindsym $mod+space exec --no-startup-id rofi -modi "drun,window,run" -show drun #-auto-select
 
 # start rofi emoji picker
 bindsym $mod+D exec --no-startup-id rofi -modi emoji -show emoji
@@ -131,16 +128,14 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+H split toggle
+bindsym $mod+V split toggle
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+F fullscreen toggle
 
 # enter sticky mode
-bindsym $mod+s sticky toggle
+bindsym $mod+S sticky toggle
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
