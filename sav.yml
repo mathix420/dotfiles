@@ -8,6 +8,9 @@ git@github.com:mathix420/dotfiles.git:
   # - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
 
+  # Env variables
+  - /etc/environment
+
   # GTK
   - /home/mathix/.config/gtk-4.0
 
