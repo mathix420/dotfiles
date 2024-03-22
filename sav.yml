@@ -33,6 +33,9 @@ git@github.com:mathix420/dotfiles.git:
   # Logitech stuff config
   - /etc/logid.cfg
 
+  # Beeper CSS
+  - /home/mathix/.config/beeper.css
+
   # IWD config
   - /etc/iwd/main.conf
 

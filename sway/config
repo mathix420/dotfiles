@@ -306,8 +306,9 @@ gaps outer 0
 # smart_gaps on
 smart_borders off
 
-bindsym $mod+g        gaps inner all set 10
-bindsym $mod+Shift+g  gaps inner all set 0
+bindsym $mod+g			  gaps inner all set 10
+bindsym $mod+Shift+g  	  gaps inner all set 0
+bindsym $mod+Shift+Alt+g  gaps inner all set 30
 
 input * {
       xkb_layout "us,mx"

@@ -1,0 +1,90 @@
+html {
+    --theme-my-bubble-color: #1256fa;
+    --theme-accent-color: #2767fc;
+    --theme-their-bubble-color: #efefef;
+    --theme-chat-background-color: #FFFFFF;
+    --theme-chat-background-image: url("https://imjosh.in/images/beeper/bubbly-bg-light.png");
+
+    --theme-borderwidth: 0;
+    --theme-borderradius: 22px;
+    --theme-bubble-padding-v: 8px;
+    --theme-bubble-padding-h: 12px;
+
+
+
+    --chatview__backgroundcolor: var(--theme-chat-background-color);
+    --chatview__backgroundimage: var(--theme-chat-background-image);
+
+    --chatview__fontsize: 2.2rem;
+    --chatview__lineheight: var(--chatview__fontsize);
+    --chatview__paddingleft: var(--size-spacing-400);
+    --chatview__paddingright: var(--size-spacing-400);
+
+    --chatview__composer__borderradius: var(--theme-borderradius);
+    --chatview__composer__backgroundcolor: #efefef;
+
+    --chatview__message_group__margintop: 12px;
+
+    --chatview__message_tail__opacity: 1;
+    --chatview__message_tail__color: var(--theme-their-bubble-color);
+    --chatview__message__backgroundcolor: var(--theme-their-bubble-color);
+    --chatview__message__fontcolor: #141414;
+
+    --chatview__message__paddingleft: var(--theme-bubble-padding-h);
+    --chatview__message__paddingright: var(--theme-bubble-padding-h);
+    --chatview__message__paddingtop: var(--theme-bubble-padding-v);
+    --chatview__message__paddingbottom: var(--theme-bubble-padding-v);
+    --chatview__message__marginleft: 4px;
+    --chatview__message__marginright: 4px;
+    --chatview__message__margintop: 4px;
+
+    --chatview__message__borderradius: var(--theme-borderradius);
+    --chatview__message_sharp__borderradius: var(--theme-borderradius);
+
+    --chatview__message_sender_name__alpha: 1;
+    --chatview__message_sender_name__lightness: 35%;
+
+    --chatview__message_self__backgroundcolor: var(--theme-my-bubble-color);
+    --chatview__readmarker__fontcolor: var(--theme-accent-color);
+}
+
+html[theme="dark"] {
+    --theme-their-bubble-color: #191919;
+    --theme-chat-background-color: #0d0d0d;
+    --theme-chat-background-image: url("https://imjosh.in/images/beeper/bubbly-bg-dark.png");
+
+
+
+    --chatview__composer__backgroundcolor: #191919;
+    --chatview__message__fontcolor: #F6F6F6;
+    --chatview__message_sender_name__lightness: 65%;
+}
+
+
+/**********************************************/
+/* Hide Left Panel/Sidebar While Chat Is Open */
+/**********************************************/
+
+html:has(.mx_MessageComposer) .bp_LeftPanel,
+html:has(.mx_MessageComposer) .mx_MatrixChat.mx_MatrixChat--with-avatar > div.noselect > div.noselect,
+html:has(.mx_MessageComposer) .bp_ArchivedList_button {
+  display: none !important;
+}
+
+.mx_RoomHeader {
+  background-color: #00000033;
+  backdrop-filter: blur(20px) saturate(1.8);
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.undefined::before {
+  display: none !important;
+}
+
+.bp_RoomToast_wrapper + div {
+  overflow: hidden !important;
+}
