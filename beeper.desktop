@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Beeper
+Exec=beeper --no-sandbox %U --default-frame
+Terminal=false
+Type=Application
+Icon=beeper
+StartupWMClass=Beeper
+X-AppImage-Version=240314pjsp57xom
+Comment=Beeper: Unified Messenger
+Categories=Utility;
