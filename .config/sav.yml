@@ -15,7 +15,8 @@ git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.emacs.d/
 
   # Env variables
-  - /etc/environment
+  - /etc/environment:
+      - etc/environment
 
   # GTK
   - /home/mathix/.config/gtk-4.0:
@@ -35,7 +36,7 @@ git@github.com:mathix420/dotfiles.git:
 
   # Custom keymap
   - /usr/share/X11/xkb/symbols/mx:
-      - keymaps/mx
+      - usr/share/X11/xkb/symbols/mx
 
   # For ssdm config and backward compatibility
   - /etc/X11/xorg.conf.d/:
@@ -48,19 +49,21 @@ git@github.com:mathix420/dotfiles.git:
       - usr/share/sddm/scripts/Xsetup
 
   # Logitech stuff config
-  - /etc/logid.cfg
+  - /etc/logid.cfg:
+      - etc/logid.cfg
 
   # Beeper
   - /home/mathix/.config/beeper.css
   - /usr/share/applications/beeper.desktop
 
   # IWD config
-  - /etc/iwd/main.conf
+  - /etc/iwd/main.conf:
+      - etc/iwd/main.conf
 
   - /etc/fonts/fonts.conf:
-      - fonts/fonts.conf
+      - etc/fonts/fonts.conf
   - /etc/fonts/local.conf:
-      - fonts/local.conf
+      - etc/fonts/local.conf
 
   - /home/mathix/wallpapers/
 
