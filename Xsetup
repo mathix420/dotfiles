@@ -1,4 +1,5 @@
 #!/bin/sh
 # Xsetup - run as root before the login dialog appears
 
-#setxkbmap us,mx
+setxkbmap -model pc105 -layout "us,mx" -option "terminate:ctrl_alt_bksp"
+
