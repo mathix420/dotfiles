@@ -157,3 +157,11 @@ export QT_QPA_PLATFORM=wayland
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# pnpm
+export PNPM_HOME="/home/mathix/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

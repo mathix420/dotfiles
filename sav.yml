@@ -26,6 +26,10 @@ git@github.com:mathix420/dotfiles.git:
   # For ssdm config and backward compatibility
   - /etc/X11/xorg.conf.d/
 
+  # Custom keymap
+  - /usr/share/X11/xkb/symbols/mx:
+      - keymaps/mx
+
   - /usr/share/sddm/themes/chili/
   - /etc/sddm.conf.d/
   - /usr/share/sddm/scripts/Xsetup

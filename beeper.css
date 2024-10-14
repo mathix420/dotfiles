@@ -51,9 +51,8 @@ html {
 html[theme="dark"] {
     --theme-their-bubble-color: #191919;
     --theme-chat-background-color: #0d0d0d;
+    --left-panel-v2-bg-no-transparency--windows: #0d0d0d;
     --theme-chat-background-image: url("https://imjosh.in/images/beeper/bubbly-bg-dark.png");
-
-
 
     --chatview__composer__backgroundcolor: #191919;
     --chatview__message__fontcolor: #F6F6F6;
@@ -61,14 +60,21 @@ html[theme="dark"] {
 }
 
 
-/**********************************************/
-/* Hide Left Panel/Sidebar While Chat Is Open */
-/**********************************************/
+.bp_MainPanel, .bp_LeftPanel {
+  background-color: #0d0d0d !important;
+}
 
-html:has(.mx_MessageComposer) .bp_LeftPanel,
 html:has(.mx_MessageComposer) .mx_MatrixChat.mx_MatrixChat--with-avatar > div.noselect > div.noselect,
 html:has(.mx_MessageComposer) .bp_ArchivedList_button {
   display: none !important;
+}
+
+html:has(.mx_MessageComposer) .bp_LeftPanel {
+  width: 0px !important;
+}
+
+.bp_LeftPanel {
+  min-width: 0px !important;
 }
 
 .mx_RoomHeader {

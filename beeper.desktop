@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Beeper
-Exec=beeper --no-sandbox %U --default-frame
-Terminal=false
 Type=Application
+Name=Beeper
+GenericName=Unified Messenger
+Comment=A unified messaging app
+Exec=beeper --no-sandbox %U
 Icon=beeper
+Terminal=false
 StartupWMClass=Beeper
-X-AppImage-Version=240314pjsp57xom
-Comment=Beeper: Unified Messenger
 Categories=Utility;

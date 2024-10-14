@@ -4,7 +4,7 @@ Type=Application
 Name=Youtube Music
 GenericName=Music Streaming
 Comment=A new music service with official albums, singles, videos, remixes, live performances and more for Android, iOS and desktop. It's all here.
-Exec=/usr/bin/google-chrome-stable --app=https://music.youtube.com/
+Exec=/usr/bin/google-chrome-stable --app=https://music.youtube.com/ --enable-features=OverlayScrollbar,OverlayScrollbarFlashAfterAnyScrollUpdate,OverlayScrollbarFlashWhenMouseEnter
 Icon=youtube-music
 Terminal=false
 Categories=AudioVideo;Player

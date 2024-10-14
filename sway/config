@@ -15,6 +15,9 @@
 for_window [class="^.*"] border pixel 0
 #for_window [floating_from="user"] border pixel 4
 
+# Bitwarden Chrome
+for_window [app_id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"] floating enable
+
 # Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable
 
