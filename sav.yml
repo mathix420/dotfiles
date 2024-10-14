@@ -23,16 +23,19 @@ git@github.com:mathix420/dotfiles.git:
   # mako - notifications
   - /home/mathix/.config/mako/
 
-  # For ssdm config and backward compatibility
-  - /etc/X11/xorg.conf.d/
-
   # Custom keymap
   - /usr/share/X11/xkb/symbols/mx:
       - keymaps/mx
 
-  - /usr/share/sddm/themes/chili/
-  - /etc/sddm.conf.d/
-  - /usr/share/sddm/scripts/Xsetup
+  # For ssdm config and backward compatibility
+  - /etc/X11/xorg.conf.d/:
+      - etc/X11/xorg.conf.d/
+  - /usr/share/sddm/themes/chili/:
+      - usr/share/sddm/themes/chili
+  - /etc/sddm.conf.d/:
+      etc/sddm.conf.d
+  - /usr/share/sddm/scripts/Xsetup:
+      - usr/share/sddm/scripts/Xsetup
 
   # Logitech stuff config
   - /etc/logid.cfg
