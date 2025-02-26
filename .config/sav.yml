@@ -11,9 +11,13 @@ git@github.com:mathix420/dotfiles.git:
       - .config/sway/
   - /home/mathix/.config/rofi/:
       - .config/rofi/
+  - /home/mathix/.config/Code/User/settings.json:
+      - .config/Code/User/settings.json
+  - /home/mathix/.config/Code/User/keybindings.json:
+      - .config/Code/User/keybindings.json
   # - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
-
+  
   # Env variables
   - /etc/environment:
       - etc/environment

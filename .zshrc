@@ -114,6 +114,9 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# adb
+export PATH="/opt/android-sdk/platform-tools:$PATH"
+
 # Virtual envs
 #. /usr/local/bin/virtualenvwrapper.sh
 

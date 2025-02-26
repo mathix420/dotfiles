@@ -1,0 +1,180 @@
+{
+    "editor.rulers": [
+        80
+    ],
+    "git.confirmSync": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.enableSmartCommit": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "debug.showBreakpointsInOverviewRuler": true,
+    "eslint.format.enable": true,
+    "eslint.run": "onSave",
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "#fff",
+            "backgroundColor": "blue",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "WARN:",
+            "color": "#000",
+            "isWholeLine": true,
+        },
+        {
+            "text": "CRITICAL:",
+            "color": "#fff",
+            "backgroundColor": "red",
+            "isWholeLine": true,
+        }
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "files.associations": {
+        ".creds": "json",
+        "*.key": "json",
+        "*.md": "markdown"
+    },
+    "material-icon-theme.files.associations": {
+        ".creds": "lock",
+        "pylone.yaml": "Buildkite"
+    },
+    "material-icon-theme.folders.associations": {
+        "engine": "Core",
+        "gcp": "Less",
+        "efs": "Database"
+    },
+    "extensions.ignoreRecommendations": false,
+    "workbench.editorAssociations": {
+        "*.ino": "default",
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.pythonPath": "/home/mathix/.pyenv/shims/python3",
+    "svg.preview.mode": "svg",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "dart.checkForSdkUpdates": false,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.cursorSurroundingLines": 1000,
+    "dart.previewLsp": true,
+    "scm.defaultViewMode": "tree",
+    "42header.email": "agissing@student.42.fr",
+    "42header.username": "agissing",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.tabs.enabled": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.defaultInterpreterPath": "/home/mathix/.pyenv/shims/python3",
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "ponicode.token": "8cec5ebe-5a17-4bcb-bf3b-495bfbaec856",
+    "webview.experimental.useExternalEndpoint": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.external.linuxExec": "",
+    "terminal.integrated.gpuAcceleration": "on",
+    "redhat.telemetry.enabled": false,
+    "arduino.useArduinoCli": true,
+    "arduino.path": "/usr/bin/arduino-cli",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[handlebars]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "mjml.mailFromName": "Arnaud Gissinger",
+    "mjml.mailRecipients": "gissingerarnaud@gmail.com",
+    "mjml.mailSender": "gissingerarnaud@gmail.com",
+    "[mjml]": {
+        "editor.defaultFormatter": "mjmlio.vscode-mjml"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "yaml.customTags": [
+        "!env scalar",
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "aws.telemetry": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[asl]": {
+        "editor.defaultFormatter": "amazonwebservices.aws-toolkit-vscode"
+    },
+    "keyboard.dispatch": "keyCode",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.fontFamily": "Hack Nerd Font, 'Droid Sans Mono', 'monospace', monospace",
+    "git.autofetch": true,
+    "editor.fontSize": 15,
+    "git.openRepositoryInParentFolders": "never",
+    "typescript.tsserver.maxTsServerMemory": 2048,
+    "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+    "aws.codeWhisperer.includeSuggestionsWithCodeReferences": false,
+    "aws.codeWhisperer.importRecommendation": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "diffEditor.experimental.showMoves": true,
+    "terminal.integrated.hideOnStartup": "always",
+    "workbench.editor.empty.hint": "hidden",
+    "iconify.inplace": false,
+    // "editor.fontLigatures": false,
+    "editor.fontLigatures": "'ss01','ss05','dlig'",
+    "window.zoomLevel": 1,
+    "window.menuBarVisibility": "toggle",
+    "editor.minimap.renderCharacters": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "svelte.enable-ts-plugin": true,
+    "workbench.colorTheme": "poimandres",
+}
