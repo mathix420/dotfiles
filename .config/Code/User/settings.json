@@ -176,5 +176,5 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "never",
     "svelte.enable-ts-plugin": true,
-    "workbench.colorTheme": "poimandres",
+    "workbench.colorTheme": "Material Theme Ocean",
 }

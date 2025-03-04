@@ -2,9 +2,11 @@
 Type=Application
 Name=Beeper
 GenericName=Unified Messenger
-Comment=A unified messaging app
-Exec=beeper %U
-Icon=beeper
+Comment=The ultimate messaging app
+Exec=beeper --no-sandbox %U
+Icon=beepertexts
 Terminal=false
 StartupWMClass=Beeper
-Categories=Utility;
+X-AppImage-Version=4.0.478
+MimeType=x-scheme-handler/beeper;x-scheme-handler/matrix;x-scheme-handler/element;
+Categories=Network;InstantMessaging;

@@ -31,6 +31,7 @@ for_window [app_id="chrome-todomate.net__-Default"] resize set 937 762
 
 # Beeper
 for_window [class="Beeper"] floating enable
+assign [class="Beeper"] workspace number 9
 
 
 # Set Master Key
@@ -167,7 +168,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
+set $ws9 "9: Beeper"
 set $ws10 "10: Tools"
 
 # switch to workspace
