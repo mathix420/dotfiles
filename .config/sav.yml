@@ -19,6 +19,7 @@ git@github.com:mathix420/dotfiles.git:
   - /home/mathix/.emacs.d/
 
   - /home/mathix/.config/SponsorBlockConfig.json
+  - /home/mathix/.config/ublock-backup.txt
 
   # Env variables
   - /etc/environment:
