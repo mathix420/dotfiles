@@ -17,7 +17,9 @@ git@github.com:mathix420/dotfiles.git:
       - .config/Code/User/keybindings.json
   # - /home/mathix/.config/i3/
   - /home/mathix/.emacs.d/
-  
+
+  - /home/mathix/.config/SponsorBlockConfig.json
+
   # Env variables
   - /etc/environment:
       - etc/environment

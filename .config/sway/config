@@ -33,6 +33,8 @@ for_window [app_id="chrome-todomate.net__-Default"] resize set 937 762
 for_window [class="Beeper"] floating enable
 assign [class="Beeper"] workspace number 9
 
+# VSCode
+assign [class="Code"] workspace number 2
 
 # Set Master Key
 set $mod Mod4
