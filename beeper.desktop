@@ -7,6 +7,6 @@ Exec=beeper --no-sandbox %U
 Icon=beepertexts
 Terminal=false
 StartupWMClass=Beeper
-X-AppImage-Version=4.0.478
+X-AppImage-Version=4.0.494
 MimeType=x-scheme-handler/beeper;x-scheme-handler/matrix;x-scheme-handler/element;
 Categories=Network;InstantMessaging;

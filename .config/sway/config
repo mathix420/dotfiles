@@ -17,13 +17,14 @@ for_window [class="^.*"] border pixel 0
 
 # Bitwarden Chrome
 for_window [app_id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"] floating enable
+for_window [instance="crx_nngceckbapebfimnlniiiahkandclblb"] floating enable
 
 # Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable
 
 # GTK file picker
-for_window [title="Open Files" app_id="xdg-desktop-portal-gtk"] floating enable
-for_window [title="Open Files" app_id="xdg-desktop-portal-gtk"] resize set 1140 650
+for_window [app_id="xdg-desktop-portal-gtk"] floating enable
+for_window [app_id="xdg-desktop-portal-gtk"] resize set 1140 650
 
 # Todo mate custom app
 for_window [app_id="chrome-todomate.net__-Default"] floating enable
@@ -31,10 +32,6 @@ for_window [app_id="chrome-todomate.net__-Default"] resize set 937 762
 
 # Beeper
 for_window [class="Beeper"] floating enable
-assign [class="Beeper"] workspace number 9
-
-# VSCode
-assign [class="Code"] workspace number 2
 
 # Set Master Key
 set $mod Mod4
@@ -213,6 +210,10 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Assign some apps to some workspaces
+assign [class="Beeper"] workspace number $ws9
+assign [class="Code"] workspace number $ws2
 
 # Media volume controls
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
