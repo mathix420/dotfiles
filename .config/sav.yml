@@ -42,8 +42,8 @@ git@github.com:mathix420/dotfiles.git:
       - .config/mako/
 
   # Custom keymap
-  - /usr/share/X11/xkb/symbols/mx:
-      - usr/share/X11/xkb/symbols/mx
+  - /etc/xkb/symbols/mx:
+      - etc/xkb/symbols/mx
 
   # For ssdm config and backward compatibility
   - /etc/X11/xorg.conf.d/:

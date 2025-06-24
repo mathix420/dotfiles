@@ -116,5 +116,10 @@
         "key": "shift+alt+left",
         "command": "editor.emmet.action.balanceOut",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
     }
 ]

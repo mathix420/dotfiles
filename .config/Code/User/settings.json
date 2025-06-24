@@ -176,5 +176,8 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "never",
     "svelte.enable-ts-plugin": true,
-    "workbench.colorTheme": "Material Theme Ocean",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "docker.extension.dockerEngineAvailabilityPrompt": false,
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
 }

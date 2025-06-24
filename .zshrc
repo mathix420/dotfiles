@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mathix/.oh-my-zsh"
 
+source /home/mathix/.secrets
+
 ZSH_THEME="af-mathix"
 
 
@@ -69,15 +71,7 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git aws)
 
-
-# NVM / NPM / NODE
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# https://github.com/Sparragus/zsh-auto-nvm-use
-# plugins+=(zsh-auto-nvm-use)
-
+# OH MY ZSH
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -147,9 +141,12 @@ alias proto-list="/bin/sh ~/42-utilities/update.sh; sh ~/42-utilities/proto-list
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-# fnm
+# fnm / node version manager
 export PATH=/home/mathix/.fnm:$PATH
 eval "`fnm env --use-on-cd`"
+
+# node config
+export NODE_OPTIONS="--max_old_space_size=4096"
 
 export SUDO_EDITOR="emacsclient"
 alias autoremove="sudo pacman -Qdtq | sudo pacman -Rs -"

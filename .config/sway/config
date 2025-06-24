@@ -66,7 +66,7 @@ bindsym $mod+E exec --no-startup-id nautilus
 bindsym $mod+Return exec --no-startup-id alacritty
 
 # lock computer
-bindsym $mod+Escape exec swaylock -i /home/mathix/wallpapers/fux.jpg
+bindsym $mod+Escape exec swaylock -i /home/mathix/wallpapers/wallhaven.png
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -287,7 +287,7 @@ corner_radius 12
 
 
 # transparency manager
-output * bg /home/mathix/wallpapers/neon-dunes-8k.jpg fill
+output * bg /home/mathix/wallpapers/wallhaven.png fill
 output eDP-1 position 0 0
 workspace $ws1 output eDP-1 DP-1
 workspace $ws2 output DP-1 eDP-1
