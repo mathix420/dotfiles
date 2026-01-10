@@ -176,8 +176,26 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "never",
     "svelte.enable-ts-plugin": true,
-    "workbench.colorTheme": "GitHub Dark Dimmed",
     "github.copilot.nextEditSuggestions.enabled": false,
     "docker.extension.dockerEngineAvailabilityPrompt": false,
     "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "biome.suggestInstallingGlobally": false,
+    "docker.extension.enableComposeLanguageServer": false,
+    "typescript.tsserver.log": "verbose",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "claudeCode.preferredLocation": "panel",
 }

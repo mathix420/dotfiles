@@ -15,9 +15,10 @@
 for_window [class="^.*"] border pixel 0
 #for_window [floating_from="user"] border pixel 4
 
+for_window [app_id="brave-nngceckbapebfimnlniiiahkandclblb-Default"] floating enable
 # Bitwarden Chrome
-for_window [app_id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"] floating enable
-for_window [instance="crx_nngceckbapebfimnlniiiahkandclblb"] floating enable
+#for_window [app_id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"] floating enable
+#for_window [instance="crx_nngceckbapebfimnlniiiahkandclblb"] floating enable
 
 # Nautilus
 for_window [app_id="org.gnome.Nautilus"] floating enable

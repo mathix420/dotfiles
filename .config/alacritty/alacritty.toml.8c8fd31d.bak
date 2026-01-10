@@ -642,8 +642,3 @@ live_config_reload = true
 working_directory = "None"
 
 [terminal]
-
-[[keyboard.bindings]]
-key = "Return"
-mods = "Shift"
-chars = "\u001b\r"
