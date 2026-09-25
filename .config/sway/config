@@ -87,6 +87,9 @@ bindsym $mod+L exec --no-startup-id USER=mathix rofi-totp
 # create new task in Peach's notion DB
 bindsym $mod+Insert exec rofi-notion run peach-tasks
 
+# Linear issue creation
+bindsym $mod+I exec /home/mathix/.local/bin/rofi-linear run
+
 # start rofi-bluetooth manager
 bindsym $mod+B exec --no-startup-id /opt/rofi-bluetooth/rofi-bluetooth
 
@@ -230,7 +233,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # Luminiosity controls
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
-bindsym $mod+XF86MonBrightnessUp exec curl -X POST http://192.168.1.58:8123/api/webhook/light-arnaud-hoZGhbTW_D537UwWgMehCK6S
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -270,13 +272,18 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        # To revert: status_command ~/.local/bin/i3status-wrapper
+        status_command i3status-rs ~/.config/i3status-rust/config.toml
+        height 32
+        font pango:Ubuntu Nerd Font Regular 11
+        separator_symbol "│"
+        status_padding 0
 	colors {
 	       background #11111188
 	       #                  border     background  text
-	       focused_workspace  #11111100    #11111188     #eeeeee
-		   active_workspace   #11111100    #11111188     #6f6f6f
-	       inactive_workspace #11111100    #11111188     #6f6f6f
+	       focused_workspace  #11111188    #11111188     #eeeeee
+		   active_workspace   #11111188    #11111188     #aaaaaa
+	       inactive_workspace #11111188    #11111188     #aaaaaa
 	}
 }
 
@@ -288,8 +295,12 @@ corner_radius 12
 
 
 # transparency manager
-output * bg /home/mathix/wallpapers/wallhaven.png fill
+output * bg /home/mathix/wallpapers/ray-of-lights.png fill
 output eDP-1 position 0 0
+# ASUS ProArt PA32QCV over Thunderbolt/USB-C: native 6K, matched by identity so the
+# connector name (DP-1..DP-4) doesn't matter. 59.992Hz is the panel's highest mode
+# (needs DSC active: OSD DP 1.4 + DSC on, full-featured TB/USB-C cable).
+output "ASUSTek COMPUTER INC PA32QCV W3LMSB005898" mode 6016x3384@59.992Hz scale 1
 workspace $ws1 output eDP-1 DP-1
 workspace $ws2 output DP-1 eDP-1
 workspace $ws3 output DP-1 eDP-1
@@ -308,7 +319,7 @@ exec --no-startup-id pactl load-module module-bluetooth-discover
 
 
 # i3-gaps key bindings
-gaps inner 10
+gaps inner 20
 gaps outer 0
 
 # smart_gaps on
@@ -319,15 +330,11 @@ bindsym $mod+Shift+g  	  gaps inner all set 0
 bindsym $mod+Shift+Alt+g  gaps inner all set 30
 
 input * {
-      xkb_layout "us,mx"
+      xkb_layout "us"
 }
 
 input "1133:45915:MX_Keys_Keyboard" {
 	 xkb_numlock enabled
-}
-
-input "5426:569:Razer_Razer_Blade_Keyboard" {
-	 xkb_layout mx
 }
 
 input "1739:52643:1A581000:00_06CB:CDA3_Touchpad" {
@@ -335,8 +342,18 @@ input "1739:52643:1A581000:00_06CB:CDA3_Touchpad" {
 }
 
 
-# Share screen
+# Share screen + systemd user session integration.
+# Propagate env to the systemd/dbus activation environment, then bring up
+# graphical-session.target (via sway-session.target's BindsTo). Required since
+# xdg-desktop-portal >= 1.22 has Requisite=graphical-session.target, so the file
+# portal (Chrome/Nautilus file picker) refuses to start until this target is active.
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK XDG_SESSION_TYPE && systemctl --user start sway-session.target
+
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 
 # Notifications
 exec mako
+
+# Private machine-specific bindings belong in this ignored directory.
+include ~/.config/sway/local.d/*

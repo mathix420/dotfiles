@@ -1,0 +1,62 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "plain"
+[theme.overrides]
+idle_bg = "#11111188"
+idle_fg = "#eeeeee"
+info_bg = "#11111188"
+info_fg = "#eeeeee"
+good_bg = "#11111188"
+good_fg = "#98c379"
+warning_bg = "#11111188"
+warning_fg = "#e5c07b"
+critical_bg = "#11111188"
+critical_fg = "#e06c75"
+separator = "│"
+separator_bg = "#00000000"
+separator_fg = "#00000000"
+alternating_tint_bg = "#00000000"
+alternating_tint_fg = "#00000000"
+
+[icons]
+icons = "awesome6"
+
+[[block]]
+block = "custom"
+command = "~/.local/bin/i3status-linear"
+interval = 120
+click = [{ button = "left", cmd = "xdg-open https://linear.app" }]
+
+[[block]]
+block = "custom"
+command = "~/.local/bin/i3status-wakatime"
+interval = 120
+click = [{ button = "left", cmd = "xdg-open https://wakatime.com/dashboard" }]
+
+[[block]]
+block = "temperature"
+interval = 5
+format = " 󰔏  $max "
+click = [{ button = "left", cmd = "alacritty -e htop" }]
+
+[[block]]
+block = "net"
+device = "enp87s0"
+format = " 󰈀  $ip "
+missing_format = ""
+click = [{ button = "left", cmd = "sh -c \"ip -4 addr show enp87s0 | grep -oP 'inet \\K[\\d.]+' | wl-copy\"" }]
+
+[[block]]
+block = "sound"
+driver = "auto"
+click = [
+  { button = "left", cmd = "pavucontrol" },
+  { button = "right", cmd = "pactl set-sink-mute @DEFAULT_SINK@ toggle" }
+]
+
+[[block]]
+block = "time"
+interval = 30
+format = "   $timestamp.datetime(f:'%a %d %b  %H:%M') "
+click = [{ button = "left", cmd = "gnome-calendar" }]

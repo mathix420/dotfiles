@@ -1,0 +1,66 @@
+# alacritree-only config. Deep-merged over alacritty.toml (arrays concatenate,
+# tables merge, primitives replace), so bindings here ADD to alacritty's.
+
+[general]
+# Home-tab (non-worktree) sessions start in $HOME. Worktree tabs always use
+# their own checkout path. alacritree expands a leading `~`; keeping it here
+# (not in the shared alacritty.toml) leaves upstream alacritty's own "None".
+working_directory = "~"
+
+[ui]
+# Always confirm before the sidebar × kills a session's PTY.
+confirm_session_close = "always"
+# Keep pane focus keyboard-driven (Alt+←/→): a sidebar click selects a session
+# but never steals keyboard focus from the terminal.
+sidebar_click_focus = false
+# No PR-status badges on worktree rows.
+pr_status = false
+
+# Pane focus (projects sidebar ↔ terminal ↔ git sidebar) on Alt+←/→. This
+# replaces the built-in Alt+←/→ workspace-switch, which moves to Alt+↑/↓ below.
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+action = "FocusLeft"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+action = "FocusRight"
+
+# Workspace switching, moved off Alt+←/→ so those drive pane focus. (The old
+# Alt+↑/↓ escape-sequence bindings were removed from alacritty.toml.)
+[[keyboard.bindings]]
+key = "Up"
+mods = "Alt"
+action = "SelectPreviousWorkspace"
+
+[[keyboard.bindings]]
+key = "Down"
+mods = "Alt"
+action = "SelectNextWorkspace"
+
+# Cross-workspace session cycling on Alt+Shift+←/→: step through every session
+# across all workspaces.
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt|Shift"
+action = "SelectPreviousSession"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt|Shift"
+action = "SelectNextSession"
+
+# Give Ctrl+K back to the shell (readline/emacs kill-line = cut to end of line).
+# The built-in default binds it to the command palette; ReceiveChar drops that
+# default and forwards the key to the PTY. Palette moves to Ctrl+Shift+P below.
+[[keyboard.bindings]]
+key = "K"
+mods = "Control"
+action = "ReceiveChar"
+
+[[keyboard.bindings]]
+key = "P"
+mods = "Control|Shift"
+action = "TogglePalette"

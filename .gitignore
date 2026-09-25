@@ -1,0 +1,41 @@
+# Credentials and private machine settings
+.secrets
+.env
+.env.*
+!.env.example
+.ssh/
+.gnupg/
+.aws/
+.linear.cfg
+.wakatime.cfg
+.config/hacompanion.toml
+.config/hacompanion/env
+.config/rofi-totp/
+.config/sway/local.d/
+**/*.pem
+**/*.key
+**/credentials.json
+
+# Runtime state, editor caches, history and backups
+.config/Code/*
+!.config/Code/User/
+.config/Code/User/*
+!.config/Code/User/settings.json
+!.config/Code/User/keybindings.json
+.emacs.d/eln-cache/
+.emacs.d/elpa/
+.emacs.d/eshell/history
+**/*.elc
+**/*.eln
+**/*.bak
+**/*~
+**/\#*\#
+**/.DS_Store
+graphify-out/
+.config/systemd/user/*.wants/
+
+# Laptop provisioning outputs and local copies of backups
+**/backups/
+**/user-backups/
+*.pkg.tar.*
+*.log

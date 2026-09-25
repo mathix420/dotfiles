@@ -1,3 +1,5 @@
+;;; init.el --- Personal Emacs configuration -*- lexical-binding: t; -*-
+
 ;; custom languages
 
 ;; Added by Package.el.  This must come before configurations of
@@ -46,7 +48,7 @@
    '(("gnu" . "https://elpa.gnu.org/packages/")
 	 ("melpa" . "https://stable.melpa.org/packages/")))
  '(package-selected-packages
-   '(timu-caribbean-theme typescript-mode lsp-mode rust-mode vue-mode yaml-mode)))
+   '(timu-caribbean-theme typescript-mode lsp-mode rust-mode vue-mode yaml-mode dart-mode)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

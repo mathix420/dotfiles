@@ -47,7 +47,11 @@ print_events = false
 render_timer = false
 
 [env]
-TERM = "screen-256color"
+# Leaving TERM unset here lets alacritty/alacritree pick "alacritty" via
+# `setup_env()` — that terminfo advertises OSC 8 hyperlink support, so apps
+# like Claude Code emit clickable PR / file links.  Overriding to
+# `screen-256color` opts out of that (and is only correct inside tmux/screen).
+# TERM = "screen-256color"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
@@ -59,7 +63,7 @@ x = 0
 y = 0
 
 [font.normal]
-family = "terminal-mono-font"
+family = "Hack Nerd Font Mono"
 
 [font.offset]
 x = 0
@@ -203,11 +207,6 @@ key = "Left"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u001B[1;3D"
-key = "Left"
-mods = "Alt"
-
-[[keyboard.bindings]]
 chars = "\u001B[D"
 key = "Left"
 mode = "~AppCursor"
@@ -226,11 +225,6 @@ mods = "Shift"
 chars = "\u001B[1;5C"
 key = "Right"
 mods = "Control"
-
-[[keyboard.bindings]]
-chars = "\u001B[1;3C"
-key = "Right"
-mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u001B[C"
@@ -253,11 +247,6 @@ key = "Up"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u001B[1;3A"
-key = "Up"
-mods = "Alt"
-
-[[keyboard.bindings]]
 chars = "\u001B[A"
 key = "Up"
 mode = "~AppCursor"
@@ -278,11 +267,6 @@ key = "Down"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u001B[1;3B"
-key = "Down"
-mods = "Alt"
-
-[[keyboard.bindings]]
 chars = "\u001B[B"
 key = "Down"
 mode = "~AppCursor"
@@ -291,10 +275,6 @@ mode = "~AppCursor"
 chars = "\u001BOB"
 key = "Down"
 mode = "AppCursor"
-
-[[keyboard.bindings]]
-chars = "\u001BOP"
-key = "F1"
 
 [[keyboard.bindings]]
 chars = "\u001BOQ"
@@ -613,7 +593,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal.shell]
 args = ["--login"]
-program = "/bin/zsh"
+program = "/bin/bash"
 
 #[visual_bell]
 #animation = "EaseOutExpo"
@@ -639,6 +619,11 @@ y = 0
 #enable_experimental_conpty_backend = false
 live_config_reload = true
 #tabspaces = 8
-working_directory = "None"
+working_directory = "/home/mathix"
 
 [terminal]
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

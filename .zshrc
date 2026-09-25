@@ -1,13 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mathix/.oh-my-zsh"
 
-source /home/mathix/.secrets
+# source /home/mathix/.secrets
 
 ZSH_THEME="af-mathix"
 
-
-autoload -U colors && colors
-autoload -U compinit && compinit
 
 echo "
    __  ______ ________ _______  __  __              
@@ -107,6 +104,7 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export TSC7_CHECKERS=4
 
 # adb
 export PATH="/opt/android-sdk/platform-tools:$PATH"
@@ -127,8 +125,8 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export EDITOR='emacsclient -t'
-export USER='agissing'
-export MAIL='agissing@student.42.fr'
+#export USER='agissing'
+#export MAIL='agissing@student.42.fr'
 
 alias emacs='emacsclient -t'
 alias open='xdg-open'
@@ -138,7 +136,6 @@ alias sudo='sudo '
 alias mf-gen="/bin/sh ~/42-utilities/update.sh; python3 ~/42-utilities/mf-gen.py"
 alias proto-list="/bin/sh ~/42-utilities/update.sh; sh ~/42-utilities/proto-list.sh"
 
-autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
 # fnm / node version manager
@@ -156,7 +153,7 @@ alias warp-connect="warp-cli connect && sleep 2 && sudo systemctl restart system
 export QT_QPA_PLATFORM=wayland
 
 # Zoxide
-eval "$(zoxide init --cmd cd zsh)"
+[[ $- == *i* ]] && eval "$(zoxide init --cmd cd zsh)"
 
 # pnpm
 export PNPM_HOME="/home/mathix/.local/share/pnpm"

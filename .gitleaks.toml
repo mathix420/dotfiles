@@ -1,0 +1,25 @@
+title = "Dotfiles secret scanning"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "VS Code key chord values, restricted to the keybindings file"
+condition = "AND"
+regexTarget = "match"
+paths = ['''(^|/)\.config/Code/User/keybindings\.json$''']
+regexes = ['''(?i)^key"\s*:\s*"(?:(?:ctrl|shift|alt|cmd)\+)+[a-z0-9]+(?: (?:(?:ctrl|shift|alt|cmd)\+)+[a-z0-9]+)*"$''']
+
+[[rules]]
+id = "home-assistant-webhook"
+description = "Home Assistant webhook URL credentials"
+regex = '''https?://[^\s"'<>]+/api/webhook/[A-Za-z0-9_-]{8,}'''
+keywords = ["/api/webhook/"]
+
+[[rules]]
+id = "sponsorblock-private-user-id"
+description = "Private SponsorBlock identity in exported settings"
+path = '''(^|/)SponsorBlockConfig\.json$'''
+regex = '''"userID"\s*:\s*"[^"\r\n]{32,}"'''
+keywords = ["userID"]

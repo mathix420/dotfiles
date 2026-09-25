@@ -1,0 +1,32 @@
+#!/bin/bash
+# Fetch today's coding time from Wakatime API
+
+space=$'\u2002'
+
+API_KEY="${WAKATIME_API_KEY:-}"
+
+# Try to get from wakatime config if not set
+if [ -z "$API_KEY" ] && [ -f ~/.wakatime.cfg ]; then
+    API_KEY=$(grep -oP 'api_key\s*=\s*\K.*' ~/.wakatime.cfg 2>/dev/null)
+fi
+
+if [ -z "$API_KEY" ]; then
+    echo " 󰖷${space}no key "
+    exit 0
+fi
+
+response=$(curl -s --max-time 5 -H "Authorization: Basic $(echo -n $API_KEY | base64)" \
+    "https://wakatime.com/api/v1/users/current/statusbar/today" 2>/dev/null)
+
+if [ $? -ne 0 ]; then
+    echo " 󰖷${space}-- "
+    exit 0
+fi
+
+time=$(echo "$response" | jq -r '.data.grand_total.text // ""' 2>/dev/null)
+
+if [ -z "$time" ] || [ "$time" = "null" ] || [ "$time" = "" ]; then
+    echo " 󰖷${space}0h "
+else
+    echo " 󰖷${space}$time "
+fi

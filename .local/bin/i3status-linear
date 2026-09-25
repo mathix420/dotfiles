@@ -1,0 +1,38 @@
+#!/bin/bash
+# Fetch assigned issues count from Linear API
+# Reads from ~/.linear.cfg or LINEAR_API_KEY env var
+
+space=$'\u2002'
+
+API_KEY="${LINEAR_API_KEY:-}"
+
+# Try to get from config file if not set
+if [ -z "$API_KEY" ] && [ -f ~/.linear.cfg ]; then
+    API_KEY=$(grep -oP 'api_key\s*=\s*\K.*' ~/.linear.cfg 2>/dev/null)
+fi
+
+if [ -z "$API_KEY" ]; then
+    echo ""
+    exit 0
+fi
+
+query='{"query": "{ viewer { assignedIssues(filter: { state: { type: { nin: [\"completed\", \"canceled\"] } } }) { nodes { id } } } }"}'
+
+response=$(curl -s --max-time 5 -X POST \
+    -H "Content-Type: application/json" \
+    -H "Authorization: $API_KEY" \
+    -d "$query" \
+    "https://api.linear.app/graphql" 2>/dev/null)
+
+if [ $? -ne 0 ]; then
+    echo " 󰌶${space}-- "
+    exit 0
+fi
+
+count=$(echo "$response" | jq '.data.viewer.assignedIssues.nodes | length' 2>/dev/null)
+
+if [ -z "$count" ] || [ "$count" = "null" ]; then
+    echo " 󰌶${space}-- "
+else
+    echo " 󰌶${space}$count "
+fi

@@ -76,7 +76,6 @@
     },
     "python.defaultInterpreterPath": "/home/mathix/.pyenv/shims/python3",
     "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
-    "ponicode.token": "8cec5ebe-5a17-4bcb-bf3b-495bfbaec856",
     "webview.experimental.useExternalEndpoint": true,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -198,4 +197,14 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "claudeCode.preferredLocation": "panel",
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schemas.adaptyv.bio": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://www.schemastore.org/": true
+    },
 }
