@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+uuid=$(grub-probe --target=fs_uuid /boot/EFI/Linux/arch-linux.efi)
+cat <<EOF
+menuentry 'Arch Linux (Framework UKI)' --id arch-framework-uki {
+    insmod part_gpt
+    insmod fat
+    search --no-floppy --fs-uuid --set=root $uuid
+    chainloader /EFI/Linux/arch-linux.efi
+}
+EOF
