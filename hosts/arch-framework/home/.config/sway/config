@@ -272,8 +272,8 @@ bar {
         status_command i3status-rs ~/.config/i3status-rust/config.toml
         height 32
         font pango:Ubuntu Nerd Font Regular 11
-        separator_symbol "│"
         status_padding 0
+        separator_symbol "│"
 	colors {
 	       background #11111188
 	       #                  border     background  text
@@ -292,7 +292,7 @@ corner_radius 12
 
 # transparency manager
 output * bg /home/mathix/wallpapers/ray-of-lights.png fill
-output eDP-1 mode 2880x1920@120Hz scale 2 position 0 0
+output eDP-1 mode 2880x1920@120Hz scale 1 position 0 0
 
 
 
@@ -303,7 +303,7 @@ output eDP-1 mode 2880x1920@120Hz scale 2 position 0 0
 
 
 # i3-gaps key bindings
-gaps inner 20
+gaps inner 10
 gaps outer 0
 
 # smart_gaps on

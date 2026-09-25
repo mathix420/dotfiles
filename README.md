@@ -5,8 +5,8 @@ machine; [`hosts/arch-framework`](hosts/arch-framework) contains the Framework
 laptop overrides. Copy only the files you need and back up existing settings first.
 
 The desktop uses custom SwayFX, Alacritty/Alacritree, Rofi, Mako, and i3status-rust.
-The root shell and editor settings are optional; the Framework profile keeps Bash
-and does not install development tools.
+The root shell and editor settings are optional; the Framework profile uses the same Zsh theme
+without installing development tools.
 
 The root status bar's Linear and WakaTime helpers read credentials from environment
 variables or ignored local files. They contain no embedded credentials. Personal

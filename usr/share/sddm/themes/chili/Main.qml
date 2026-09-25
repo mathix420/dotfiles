@@ -183,6 +183,7 @@ Rectangle {
                     state = "hidden";
                 }
             }
+            active: config.EnableVirtualKeyboard == "true"
             source: "components/VirtualKeyboard.qml"
             anchors {
                 left: parent.left

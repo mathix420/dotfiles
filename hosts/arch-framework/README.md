@@ -2,11 +2,11 @@
 
 Desktop-only overrides for the Framework Laptop 13 Pro (Intel Core Ultra Series 3).
 Use `home/` as an overlay on the user's home directory, backing up existing files.
-Do not apply the root Zsh or editor configurations as part of this profile.
+The profile includes the personal Zsh/Oh My Zsh prompt with optional development-tool initialization guarded; it does not install development tools or editor configurations.
 
-Preserved settings: US keyboard, 2880×1920 at 120 Hz and scale 2, default touchpad
-behavior, Bash, NetworkManager with iwd, UFW, and the balanced power profile.
-The profile does not modify boot, storage, or login-manager settings.
+Preserved settings: US keyboard, 2880×1920 at 120 Hz and scale 1, default touchpad
+behavior, Zsh with the af-mathix theme, NetworkManager with iwd, UFW, and the balanced power profile.
+The greeter uses the repository’s original Chili theme through SDDM’s Qt 5 greeter. GRUB uses a hidden menu with zero delay; keep the laptop’s existing kernel command line and regenerate grub.cfg locally. Storage and firmware settings are unchanged.
 
 The installed compositor matches the primary machine:
 
@@ -32,3 +32,7 @@ the compositor. A configuration reload alone cannot switch standard Sway to Sway
 
 Rofi 2.0.0 on this laptop crashes in the cleanup path of `-rasi-validate`, even for
 a minimal config. Normal launcher startup and `-dump-config` were verified.
+
+The bar uses a 32-pixel height and 11-point font at display scale 1. Inner gaps are 10 pixels. Rofi and Alacritty use the original repository font settings at native display scale. Install Oh My Zsh at `~/.oh-my-zsh`, then overlay the included `af-mathix` theme.
+
+System overrides are in `etc/`. Copy the root repository’s `usr/share/sddm/themes/chili` to `/usr/share/sddm/themes/chili`, install the Qt 5 runtime dependencies from `packages.txt`, and enable the supplied SDDM theme override. Greeter preview: `sddm-greeter --test-mode --theme /usr/share/sddm/themes/chili`. Back up GRUB settings and generated configuration before applying the four variables in `grub-settings.conf`; regenerate and check the output with `grub-mkconfig` and `grub-script-check`.

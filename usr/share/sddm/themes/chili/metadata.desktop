@@ -14,3 +14,5 @@ ConfigFile=theme.conf
 TranslationsDirectory=translations
 Theme-Id=chili
 Theme-API=2.0
+
+QtVersion=5

@@ -34,3 +34,8 @@ xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xorg-xwayland
+zsh
+qt5-declarative
+qt5-quickcontrols
+qt5-graphicaleffects
+qt5-svg

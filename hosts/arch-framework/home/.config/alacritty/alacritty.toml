@@ -63,7 +63,7 @@ x = 0
 y = 0
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+family = "terminal-mono-font"
 
 [font.offset]
 x = 0
@@ -593,7 +593,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal.shell]
 args = ["--login"]
-program = "/bin/bash"
+program = "/bin/zsh"
 
 #[visual_bell]
 #animation = "EaseOutExpo"
